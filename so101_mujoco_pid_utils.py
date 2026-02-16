@@ -33,11 +33,11 @@ def lerp_pose(p0: dict[str, float], p1: dict[str, float], s: float) -> dict[str,
 def build_default_pid(joint_names=DEFAULT_JOINTS) -> JointPID:
     # Conservative baseline gains; you will likely tune per joint.
     gains = {
-       "shoulder_pan":  PIDGains(kp=30.0, ki=6.0,  kd=6.0,  i_limit=2.0, tau_limit=8.0),
-        "shoulder_lift": PIDGains(kp=55.0, ki=11.0, kd=11.0, i_limit=2.0, tau_limit=18.0),
-        "elbow_flex":    PIDGains(kp=42.0, ki=8.5,  kd=8.5,  i_limit=2.0, tau_limit=15.0),
-        "wrist_flex":    PIDGains(kp=22.0, ki=4.5,  kd=4.5,  i_limit=2.0, tau_limit=6.0),
-        "wrist_roll":    PIDGains(kp=15.0, ki=3.0,  kd=3.0,  i_limit=2.0, tau_limit=3.0),
+       "shoulder_pan":  PIDGains(kp=60.0, ki=1.5, kd=6.0,  i_limit=2.0, tau_limit=8.0),
+        "shoulder_lift": PIDGains(kp=110.0, ki=3.0, kd=11.0, i_limit=2.0, tau_limit=18.0),
+        "elbow_flex":    PIDGains(kp=85.0, ki=2.5, kd=8.5,  i_limit=2.0, tau_limit=15.0),
+        "wrist_flex":    PIDGains(kp=45.0, ki=1.2, kd=4.5,  i_limit=2.0, tau_limit=6.0),
+        "wrist_roll":    PIDGains(kp=28.0, ki=0.8, kd=2.8,  i_limit=2.0, tau_limit=3.0),
     }
     # If some joints missing from dict, fallback
     for jn in joint_names:

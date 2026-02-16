@@ -1,0 +1,51 @@
+Los siguientes snippets de código muestran las variantes de PID mencionadas en el reporte. Estas se deben colocar en so101_mujoco_pid_utils para poder probar cada PID de manera individual
+
+PID PRIMERA VARIACIÓN
+
+gains_pid1 = {
+    "shoulder_pan":  PIDGains(kp=8.0,  ki=0.4, kd=0.8,  i_limit=2.0, tau_limit=8.0),
+    "shoulder_lift": PIDGains(kp=15.0, ki=0.8, kd=1.5,  i_limit=2.0, tau_limit=18.0),
+    "elbow_flex":    PIDGains(kp=12.0, ki=0.6, kd=1.2,  i_limit=2.0, tau_limit=15.0),
+    "wrist_flex":    PIDGains(kp=6.0,  ki=0.3, kd=0.6,  i_limit=2.0, tau_limit=6.0),
+    "wrist_roll":    PIDGains(kp=4.0,  ki=0.2, kd=0.4,  i_limit=2.0, tau_limit=3.0),
+}
+
+PID SEGUNDA VARIACIÓN
+
+gains_pid2 = {
+    "shoulder_pan":  PIDGains(kp=25.0, ki=1.2, kd=5.0,  i_limit=2.0, tau_limit=8.0),
+    "shoulder_lift": PIDGains(kp=45.0, ki=2.2, kd=9.0,  i_limit=2.0, tau_limit=18.0),
+    "elbow_flex":    PIDGains(kp=35.0, ki=1.8, kd=7.0,  i_limit=2.0, tau_limit=15.0),
+    "wrist_flex":    PIDGains(kp=18.0, ki=0.9, kd=3.6,  i_limit=2.0, tau_limit=6.0),
+    "wrist_roll":    PIDGains(kp=12.0, ki=0.6, kd=2.4,  i_limit=2.0, tau_limit=3.0),
+}
+
+PID TERCERA VARIACIÓN
+
+gains_pid3 = {
+    "shoulder_pan":  PIDGains(kp=60.0, ki=1.5, kd=6.0,  i_limit=2.0, tau_limit=8.0),
+    "shoulder_lift": PIDGains(kp=110.0, ki=3.0, kd=11.0, i_limit=2.0, tau_limit=18.0),
+    "elbow_flex":    PIDGains(kp=85.0, ki=2.5, kd=8.5,  i_limit=2.0, tau_limit=15.0),
+    "wrist_flex":    PIDGains(kp=45.0, ki=1.2, kd=4.5,  i_limit=2.0, tau_limit=6.0),
+    "wrist_roll":    PIDGains(kp=28.0, ki=0.8, kd=2.8,  i_limit=2.0, tau_limit=3.0),
+}
+
+PID CUARTA VARIACIÓN
+
+gains_pid4 = {
+    "shoulder_pan":  PIDGains(kp=50.0, ki=1.5, kd=12.0, i_limit=2.0, tau_limit=8.0),
+    "shoulder_lift": PIDGains(kp=90.0, ki=3.0, kd=22.0, i_limit=2.0, tau_limit=18.0),
+    "elbow_flex":    PIDGains(kp=70.0, ki=2.5, kd=17.0, i_limit=2.0, tau_limit=15.0),
+    "wrist_flex":    PIDGains(kp=38.0, ki=1.2, kd=9.0,  i_limit=2.0, tau_limit=6.0),
+    "wrist_roll":    PIDGains(kp=24.0, ki=0.8, kd=6.0,  i_limit=2.0, tau_limit=3.0),
+}
+
+PID QUINTA VARIACIÓN
+
+gains_pid5 = {
+    "shoulder_pan":  PIDGains(kp=30.0, ki=6.0,  kd=6.0,  i_limit=2.0, tau_limit=8.0),
+    "shoulder_lift": PIDGains(kp=55.0, ki=11.0, kd=11.0, i_limit=2.0, tau_limit=18.0),
+    "elbow_flex":    PIDGains(kp=42.0, ki=8.5,  kd=8.5,  i_limit=2.0, tau_limit=15.0),
+    "wrist_flex":    PIDGains(kp=22.0, ki=4.5,  kd=4.5,  i_limit=2.0, tau_limit=6.0),
+    "wrist_roll":    PIDGains(kp=15.0, ki=3.0,  kd=3.0,  i_limit=2.0, tau_limit=3.0),
+}
