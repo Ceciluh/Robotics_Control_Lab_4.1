@@ -37,12 +37,13 @@ def lerp_pose(p0: dict[str, float], p1: dict[str, float], s: float) -> dict[str,
 def build_default_pid(joint_names=DEFAULT_JOINTS) -> JointPID:
     # Start with zeros so students explicitly tune.
     gains = {
-        "shoulder_pan":  PIDGains(kp=0.55, ki=0, kd=0.30, i_limit=2.0, tau_limit=8.0),
-        "shoulder_lift": PIDGains(kp=0.30, ki=0, kd=0.65, i_limit=2.0, tau_limit=18.0),
-        "elbow_flex":    PIDGains(kp=0.18, ki=0, kd=0.75, i_limit=2.0, tau_limit=15.0),
-        "wrist_flex":    PIDGains(kp=1.0, ki=0, kd=0.28, i_limit=2.0, tau_limit=6.0),
-        "wrist_roll":    PIDGains(kp=0.32, ki=0, kd=0.22, i_limit=2.0, tau_limit=3.0),
+    "shoulder_pan":  PIDGains(kp=1.6, ki=0, kd=0.18, i_limit=2.0, tau_limit=8.0),
+    "shoulder_lift": PIDGains(kp=1.8, ki=0, kd=0.20, i_limit=2.0, tau_limit=18.0),
+    "elbow_flex":    PIDGains(kp=0.9, ki=0, kd=0.3,  i_limit=2.0, tau_limit=15.0),
+    "wrist_flex":    PIDGains(kp=1.0, ki=0, kd=0.12, i_limit=2.0, tau_limit=6.0),
+    "wrist_roll":    PIDGains(kp=0.8, ki=0, kd=0.10, i_limit=2.0, tau_limit=3.0),
     }
+
     for jn in joint_names:
         if jn not in gains:
             gains[jn] = PIDGains(kp=25.0, ki=0, kd=1.0, i_limit=2.0, tau_limit=6.0)

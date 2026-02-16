@@ -18,7 +18,7 @@ with mujoco.viewer.launch_passive(m, d) as viewer:
     while viewer.is_running() and time.time() - start < 30:
         step_start = time.time()
 
-        mujoco.mj_step(m, d)                                    
+        mujoco.mj_step(m, d)
 
         # NEW: record one sample per step (after mj_step = realized state)
         plotter.sample(m, d)
