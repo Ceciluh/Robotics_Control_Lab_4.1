@@ -1,6 +1,6 @@
 # Compilación del Programa
 
-Para compilar este programa, siga los siguientes pasos.
+Para compilar este programa, siga los siguientes pasos. Revisa las diferentes brancehs para las variaciones de P, PI, PD Yy PID
 
 ## Requisitos
 
