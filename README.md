@@ -16,4 +16,4 @@ Para compilar este programa, siga los siguientes pasos.
 4. Instalar las librerías necesarias en su entorno.
 5. Compilar el archivo:
   ```bash
-  run_mujoco_simulation
+run_mujoco_simulation
