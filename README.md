@@ -5,6 +5,7 @@ Para compilar este programa, siga los siguientes pasos. Revisa las diferentes br
 ## Requisitos
 
 - Ubuntu 22.04
+- Python
 
 ## Pasos de instalación
 
